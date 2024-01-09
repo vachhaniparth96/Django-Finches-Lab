@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>This is the Finches Index Page</h1>
+    {% for finch in finches %}
+    <div>
+        <h2>{{ finch.name }}</h2>
+        <p>{{ finch.description }}</p>
+        <p>{{ finch.size }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
+```
