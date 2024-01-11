@@ -6,5 +6,8 @@
         <p>{{ finch.description }}</p>
         <p>{{ finch.size }}</p>
     </div>
+    <div class="card-action">
+        <a href="{% url 'update' finch.id %}">Edit</a>
+        <a href="{% url 'delete' finch.id %}">Delete</a>
 </div>
 {% endblock %}

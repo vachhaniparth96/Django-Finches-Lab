@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>This is the Finches Index Page</h1>
+    <h1>Types of Finches</h1>
     {% for f in finches %}
-    <a href="/finches/{{ f.id }}">
+    <a href="{% url 'detail' f.id %}">
     <div class="card">
         <div class="card-content">
             <span class="card-title"><h2>{{ f.name }}</h2></span>
-            <p>{{ f.description }}</p>
-            <p>{{ f.size }}</p>
+            <p>Click to see more information about this finch!</p>
         </div>
     </div>
     </a>
